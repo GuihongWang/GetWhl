@@ -28,10 +28,11 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-#       - name: Install VS 2019
-#         run: |
-#           choco install visualstudio2019community
-#           choco install visualstudio2019-workload-nativedesktop
+      - name: Install VS 2019
+        run: |
+           pip install Cython
+           choco install visualstudio2019community
+           choco install visualstudio2019-workload-nativedesktop
           
 #       - name: Get specific version CMake, v3.18.4
 #         run: choco install cmake --version=3.18.4

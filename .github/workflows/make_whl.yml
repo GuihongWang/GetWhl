@@ -13,11 +13,11 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # 此处将涉及编译后whl适用的平台
-    runs-on: windows-2019
+    runs-on: windows-2022
     
     strategy:
       matrix:
-        python-version: [ '3.6', '3.7', '3.8', '3.9' ]
+        python-version: [ '3.10' ]
     name: 当Python环境为 ${{ matrix.python-version }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -40,8 +40,10 @@ jobs:
       - name: 正在编译 ${{ matrix.python-version }} 的Whl文件
         run: |
           # 填写需要编译Whl包的Git仓库，此处以QPT为例
-          git clone https://github.com/QPT-Family/QPT
-          cd QPT
+          git clone https://github.com/Plachtaa/VITS-fast-fine-tuning
+          cd VITS-fast-fine-tuning
+          cd monotonic_align
+          mkdir monotonic_align
           python -m pip install -U setuptools wheel
           python setup.py sdist bdist_wheel
         
@@ -49,4 +51,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with: 
           name: 编译成功的Whl-Python${{ matrix.python-version }}
-          path: QPT/dist
+          path: GuihongWang/dist

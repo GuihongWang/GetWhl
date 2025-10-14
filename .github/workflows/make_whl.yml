@@ -31,6 +31,8 @@ jobs:
       - name: Install VS 2019
         run: |
            pip install Cython
+           wget https://github.com/Plachtaa/VITS-fast-fine-tuning/raw/refs/heads/main/requirements.txt
+           pip install -r requirements.txt
            choco install visualstudio2019community
            choco install visualstudio2019-workload-nativedesktop
           

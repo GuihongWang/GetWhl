@@ -55,5 +55,5 @@ jobs:
       - name: 上传文件
         uses: actions/upload-artifact@v4
         with: 
-          name: 编译成功的Whl-Python${{ matrix.python-version }}
+          name: Whl-Python${{ matrix.python-version }}
           path: VITS-fast-fine-tuning/monotonic_align/dist

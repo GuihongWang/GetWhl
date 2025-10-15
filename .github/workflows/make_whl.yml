@@ -45,7 +45,9 @@ jobs:
           # 填写需要编译Whl包的Git仓库，此处以QPT为例
           git clone https://github.com/Plachtaa/VITS-fast-fine-tuning
           cd VITS-fast-fine-tuning
+          pip install -r requirements.txt
           cd monotonic_align
+          pip install numpy
           mkdir monotonic_align
           python -m pip install -U setuptools wheel
           python setup.py sdist bdist_wheel

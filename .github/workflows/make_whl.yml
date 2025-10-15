@@ -17,7 +17,7 @@ jobs:
     
     strategy:
       matrix:
-        python-version: [ '3.8,3.9,3.10,3.11,3.12,3.13,3.14' ]
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12', '3.13', '3.14' ]
     name: 当Python环境为 ${{ matrix.python-version }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job

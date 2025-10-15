@@ -56,4 +56,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with: 
           name: 编译成功的Whl-Python${{ matrix.python-version }}
-          path: GuihongWang/dist
+          path: VITS-fast-fine-tuning/monotonic_align/dist

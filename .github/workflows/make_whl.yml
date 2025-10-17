@@ -56,4 +56,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with: 
           name: Whl-Python${{ matrix.python-version }}
-          path: VITS-fast-fine-tuning/monotonic_align/dist
+          path: VITS-fast-fine-tuning/monotonic_align

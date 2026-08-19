@@ -17,7 +17,7 @@ jobs:
     
     strategy:
       matrix:
-        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12', '3.13', '3.14' ]
+        python-version: [ '3.10', '3.11', '3.12', '3.13', '3.14' ]
     name: 当Python环境为 ${{ matrix.python-version }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -43,8 +43,8 @@ jobs:
       - name: 正在编译 ${{ matrix.python-version }} 的Whl文件
         run: |
           # 填写需要编译Whl包的Git仓库，此处以QPT为例
-          git clone https://github.com/vllm-project/vllm.git
-          cd vllm
+          git clone https://github.com/SystemPanic/vllm-windows
+          cd vllm-windows
           pip install -r requirements/build/cuda.txt
           pip install numpy
           python -m pip install -U setuptools wheel
